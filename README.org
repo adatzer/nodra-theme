@@ -50,6 +50,6 @@ To load this theme always on startup, add to your init.el file:
 
    #+CAPTION: C, Lisp, Slime, Sldb
    #+NAME: lisp-c
-   [[./scrshot-c-lisp-slime]]
+   [[./scrshot-c-lisp-slime.png]]
 
    
