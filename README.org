@@ -39,7 +39,9 @@ To load this theme always on startup, add to your init.el file:
 1. Used with Emacs 26, needs > Emacs 24.
 2. Assumes 256-color palette.
 3. If you modify the theme, remember first to
-   M-x disable-theme RET nodra RET
+   
+   *M-x disable-theme RET nodra RET*
+
    and then load it again, for your changes to take effect.
 
 ** Screenshots
