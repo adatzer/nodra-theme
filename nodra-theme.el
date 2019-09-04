@@ -141,7 +141,7 @@
  
  `(slime-repl-input-face          ((t (:foreground ,nodra-deff))))
  `(slime-repl-output-face         ((t (:inherit font-lock-string-face))))
- `(slime-repl-inputed-output-face ((t (:foreground ,nodra-green :weight bold))))
+ `(slime-repl-inputed-output-face ((t (:foreground ,nodra-green))))
  `(slime-repl-result-face         ((t (:foreground ,nodra-deff))))
  
  `(slime-inspector-action-face  ((t (:foreground ,nodra-blu4))))
