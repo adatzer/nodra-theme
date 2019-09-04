@@ -20,7 +20,7 @@
      (nodra-blu3  "#19547a")
      (nodra-blu4  "#0072ff")
      (nodra-cyan  "#00ffff")
-     (nodra-viola "#250323")
+     (nodra-viola "#120111")
      (nodra-green "#00ff00")
      (nodra-pink0 "#ff1493")
      (nodra-pink1 "#f78bc5"))
