@@ -12,6 +12,7 @@
      (nodra-cy2   "#99d1ce")
      (nodra-white "#ffffff")
      (nodra-deff  "#205070")
+     (nodra-comm  "#303030")
      
      (nodra-red   "#aa0000")
      (nodra-hu    "#a05050")
@@ -54,9 +55,9 @@
  `(escape-glyph                     ((t (:foreground ,nodra-hu
 						     :weight bold))))
  `(font-lock-comment-face           ((t (:background ,nodra-viola
-						     :foreground ,nodra-white))))
+						     :foreground ,nodra-comm))))  ; vs nodra-white
  `(font-lock-comment-delimiter-face ((t (:background ,nodra-viola
-						     :foreground ,nodra-white))))
+						     :foreground ,nodra-comm))))  ; vs nodra-white
  `(font-lock-builtin-face       ((t (:foreground ,nodra-blu3))))
  `(font-lock-keyword-face       ((t (:foreground ,nodra-blu3))))
  `(font-lock-constant-face      ((t (:foreground ,nodra-blu3))))
