@@ -128,8 +128,9 @@
 						       :foreground ,nodra-pink1))))
  
  ;; dired
- `(dired-directory ((t (:foreground ,nodra-gold :weight bold))))
+ `(dired-directory ((t (:foreground ,nodra-cyan :weight bold))))
  `(dired-symlink   ((t (:foreground ,nodra-yell :weight normal :slant italic))))
+ `(dired-header    ((t (:foreground ,nodra-cyan :weight bold))))
 
  ;; org
  `(org-level-1 ((t (:foreground ,nodra-gold))))
