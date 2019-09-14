@@ -13,14 +13,17 @@
      (nodra-white "#ffffff")
      (nodra-deff  "#205070")
      (nodra-comm  "#303030")
+     (nodra-inac  "#0f0f0f")
      
      (nodra-red   "#aa0000")
      (nodra-hu    "#a05050")
      (nodra-yell  "#d7d787")
+     (nodra-gold  "#ffd700")
      (nodra-blu0  "#5588dd")
      (nodra-blu3  "#19547a")
      (nodra-blu4  "#0072ff")
-     (nodra-cyan  "#00ffff")
+     (nodra-lsb   "#b0c4de")
+     (nodra-cyan  "#00e5ee")
      (nodra-viola "#120111")
      (nodra-green "#00ff00")
      (nodra-pink0 "#ff1493")
@@ -58,7 +61,7 @@
 						     :foreground ,nodra-comm))))  ; vs nodra-white
  `(font-lock-comment-delimiter-face ((t (:background ,nodra-viola
 						     :foreground ,nodra-comm))))  ; vs nodra-white
- `(font-lock-builtin-face       ((t (:foreground ,nodra-blu3))))
+ `(font-lock-builtin-face       ((t (:foreground ,nodra-lsb))))
  `(font-lock-keyword-face       ((t (:foreground ,nodra-blu3))))
  `(font-lock-constant-face      ((t (:foreground ,nodra-blu3))))
  `(font-lock-variable-name-face ((t (:foreground ,nodra-deff))))
@@ -91,12 +94,11 @@
  `(mode-line           ((t (:background nil
 					:foreground ,nodra-blu4
 					:box (:line-width -1 :color ,nodra-blu4)))))
- `(mode-line-inactive  ((t (:background nil
-					:foreground ,nodra-cy0
+ `(mode-line-inactive  ((t (:background ,nodra-inac
+       					:foreground ,nodra-inac
 					:box nil))))
  `(mode-line-highlight ((t (:foreground ,nodra-cy2))))
- `(mode-line-buffer-id ((t (:foreground ,nodra-pink0       
-					:weight bold))))
+ `(mode-line-buffer-id ((t (:foreground ,nodra-pink0 :weight normal))))
 
  ;; completions
  `(completions-common-part      ((t (:foreground ,nodra-white))))
@@ -126,8 +128,20 @@
 						       :foreground ,nodra-pink1))))
  
  ;; dired
- `(dired-directory ((t (:foreground ,nodra-pink0 :weight bold))))
+ `(dired-directory ((t (:foreground ,nodra-gold :weight bold))))
  `(dired-symlink   ((t (:foreground ,nodra-yell :weight normal :slant italic))))
+
+ ;; org
+ `(org-level-1 ((t (:foreground ,nodra-gold))))
+ `(org-level-2 ((t (:foreground ,nodra-gold))))
+ `(org-level-3 ((t (:foreground ,nodra-gold))))
+ `(org-level-4 ((t (:foreground ,nodra-gold))))
+ `(org-level-5 ((t (:foreground ,nodra-gold))))
+ `(org-level-6 ((t (:foreground ,nodra-gold))))
+ `(org-level-7 ((t (:foreground ,nodra-gold))))
+ `(org-level-8 ((t (:foreground ,nodra-gold))))
+ `(org-block   ((t (:foreground ,nodra-lsb))))
+ `(org-table   ((t (:foreground ,nodra-lsb))))
 
  ;; slime
  `(slime-error-face         ((t (:underline (:style wave :color ,nodra-red)))))
@@ -138,7 +152,7 @@
  `(slime-reader-conditional-face ((t (:background nil
 						  :foreground ,nodra-white))))
  
- `(slime-repl-prompt-face ((t (:foreground ,nodra-white :weight bold))))
+ `(slime-repl-prompt-face ((t (:foreground ,nodra-lsb :weight bold))))
  
  `(slime-repl-input-face          ((t (:foreground ,nodra-deff))))
  `(slime-repl-output-face         ((t (:inherit font-lock-string-face))))
@@ -156,7 +170,7 @@
  `(sldb-condition-face      ((t (:inherit font-lock-warning-face))))
  `(sldb-section-face        ((t (:inherit header-line))))
  `(sldb-restart-face        ((t (:foreground ,nodra-deff))))
- `(sldb-restart-type-face   ((t (:foreground ,nodra-blu0))))
+ `(sldb-restart-type-face   ((t (:foreground ,nodra-blu0 :weight bold))))
  `(sldb-restart-number-face ((t (:foreground ,nodra-blu0 :weight bold))))
  ))
 
