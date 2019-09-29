@@ -5,7 +5,7 @@
 
 ;; Colors - assume 256-color palette
 (let
-    ((nodra-black "#000000") 
+    ((nodra-black "#000000")
      (nodra-grey0 "#000009")
      (nodra-grey2 "#0a3749")
      (nodra-cy0   "#245361")
@@ -14,21 +14,24 @@
      (nodra-deff  "#205070")
      (nodra-comm  "#303030")
      (nodra-inac  "#0f0f0f")
-     
+
      (nodra-red   "#aa0000")
+     (nodra-kerr  "#aa0a4a")
      (nodra-hu    "#a05050")
      (nodra-yell  "#d7d787")
      (nodra-gold  "#ffd700")
      (nodra-blu0  "#5588dd")
-     (nodra-blu3  "#19547a")
+     (nodra-blu2  "#223377")
      (nodra-blu4  "#0072ff")
      (nodra-lsb   "#b0c4de")
+     (nodra-paren "#4f94cd")
      (nodra-cyan  "#00e5ee")
      (nodra-viola "#120111")
      (nodra-green "#00ff00")
+     (nodra-lsg   "#20b2aa")
      (nodra-pink0 "#ff1493")
      (nodra-pink1 "#f78bc5"))
-  
+
 (custom-theme-set-faces
  'nodra
  `(default     ((t (:background ,nodra-black
@@ -50,7 +53,7 @@
  `(line-number-current-line ((t (:inherit highlight))))
  `(fringe                   ((t (:background ,nodra-grey0
 					     :foreground ,nodra-cy2))))
- `(vertical-border          ((t (:foreground ,nodra-cy0))))
+ `(vertical-border          ((t (:foreground ,nodra-grey0))))
  `(trailing-whitespace      ((t (:background ,nodra-red))))
  `(scroll-bar               ((t (:foreground ,nodra-grey2))))
 
@@ -62,13 +65,13 @@
  `(font-lock-comment-delimiter-face ((t (:background ,nodra-viola
 						     :foreground ,nodra-comm))))  ; vs nodra-white
  `(font-lock-builtin-face       ((t (:foreground ,nodra-lsb))))
- `(font-lock-keyword-face       ((t (:foreground ,nodra-blu3))))
- `(font-lock-constant-face      ((t (:foreground ,nodra-blu3))))
+ `(font-lock-keyword-face       ((t (:foreground ,nodra-deff))))
+ `(font-lock-constant-face      ((t (:foreground ,nodra-deff))))
  `(font-lock-variable-name-face ((t (:foreground ,nodra-deff))))
  `(font-lock-function-name-face ((t (:foreground ,nodra-deff))))
  `(font-lock-doc-face     ((t (:foreground ,nodra-hu))))
  `(font-lock-string-face  ((t (:foreground ,nodra-hu))))
- `(font-lock-type-face    ((t (:foreground ,nodra-blu3))))
+ `(font-lock-type-face    ((t (:foreground ,nodra-deff))))
  `(font-lock-warning-face ((t (:foreground ,nodra-red))))
  `(error   ((t (:foreground ,nodra-red))))
  `(success ((t (:foreground ,nodra-green))))
@@ -90,7 +93,7 @@
  `(header-line         ((t (:background ,nodra-grey2
 					:foreground ,nodra-cyan))))
  `(menu                ((t (:background ,nodra-grey2
-					:foreground ,nodra-cy2)))) 
+					:foreground ,nodra-cy2))))
  `(mode-line           ((t (:background nil
 					:foreground ,nodra-blu4
 					:box (:line-width -1 :color ,nodra-blu4)))))
@@ -126,11 +129,18 @@
  `(which-key-command-description-face ((t (:foreground ,nodra-cyan))))
  `(which-key-separator-face           ((t (:background nil
 						       :foreground ,nodra-pink1))))
- 
+
  ;; dired
  `(dired-directory ((t (:foreground ,nodra-cyan :weight bold))))
  `(dired-symlink   ((t (:foreground ,nodra-yell :weight normal :slant italic))))
  `(dired-header    ((t (:foreground ,nodra-cyan :weight bold))))
+
+ ;; neotree
+ `(neo-root-dir-face   ((t (:foreground ,nodra-pink0))))
+ `(neo-header-face     ((t (:foreground ,nodra-blu2 :weight bold))))
+ `(neo-file-link-face  ((t (:foreground ,nodra-cy2))))
+ `(neo-expand-btn-face ((t (:foreground ,nodra-blu2))))
+ `(neo-dir-link-face   ((t (:foreground ,nodra-blu2))))
 
  ;; org
  `(org-level-1 ((t (:foreground ,nodra-gold))))
@@ -146,26 +156,26 @@
 
  ;; slime
  `(slime-error-face         ((t (:underline (:style wave :color ,nodra-red)))))
- `(slime-warning-face       ((t (:underline (:style wave :color ,nodra-pink1))))) 
+ `(slime-warning-face       ((t (:underline (:style wave :color ,nodra-pink1)))))
  `(slime-note-face          ((t (:underline (:style wave :color ,nodra-yell)))))
  `(slime-style-warning-face ((t (:underline (:style wave :color ,nodra-green)))))
 
  `(slime-reader-conditional-face ((t (:background nil
 						  :foreground ,nodra-white))))
- 
- `(slime-repl-prompt-face ((t (:foreground ,nodra-lsb :weight bold))))
- 
+
+ `(slime-repl-prompt-face ((t (:foreground ,nodra-kerr :weight bold))))
+
  `(slime-repl-input-face          ((t (:foreground ,nodra-deff))))
  `(slime-repl-output-face         ((t (:inherit font-lock-string-face))))
  `(slime-repl-inputed-output-face ((t (:foreground ,nodra-green))))
  `(slime-repl-result-face         ((t (:foreground ,nodra-deff))))
- 
+
  `(slime-inspector-action-face  ((t (:foreground ,nodra-blu4))))
  `(slime-inspector-label-face   ((t (:foreground ,nodra-blu4))))
  `(slime-inspector-topline-face ((t (:foreground ,nodra-blu4))))
  `(slime-inspector-type-face    ((t (:foreground ,nodra-blu4))))
  `(slime-inspector-value-face   ((t (:foreground ,nodra-blu4))))
- 
+
  `(sldb-restartable-frame-line-face ((t (:foreground ,nodra-green))))
  `(sldb-topline-face        ((t (:foreground ,nodra-cyan))))
  `(sldb-condition-face      ((t (:inherit font-lock-warning-face))))
@@ -188,4 +198,3 @@
 
 
 ;;; nodra-theme.el ends here
-
