@@ -12,7 +12,7 @@
      (nodra-cy2   "#99d1ce")
      (nodra-white "#ffffff")
      (nodra-deff  "#205070")
-     (nodra-comm  "#303030")
+     (nodra-comm  "#404040")
      (nodra-inac  "#0f0f0f")
 
      (nodra-red   "#aa0000")
@@ -163,7 +163,7 @@
  `(slime-reader-conditional-face ((t (:background nil
 						  :foreground ,nodra-white))))
 
- `(slime-repl-prompt-face ((t (:foreground ,nodra-kerr :weight bold))))
+ `(slime-repl-prompt-face ((t (:foreground ,nodra-lsb :weight bold))))
 
  `(slime-repl-input-face          ((t (:foreground ,nodra-deff))))
  `(slime-repl-output-face         ((t (:inherit font-lock-string-face))))
