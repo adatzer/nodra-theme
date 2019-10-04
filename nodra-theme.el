@@ -12,11 +12,11 @@
      (nodra-cy2   "#99d1ce")
      (nodra-white "#ffffff")
      (nodra-deff  "#205070")
-     (nodra-comm  "#404040")
+     (nodra-comm  "#505050")
      (nodra-inac  "#0f0f0f")
 
      (nodra-red   "#aa0000")
-     (nodra-kerr  "#aa0a4a")
+     (nodra-kerr  "#aa0a5a")
      (nodra-hu    "#a05050")
      (nodra-yell  "#d7d787")
      (nodra-gold  "#ffd700")
@@ -28,7 +28,7 @@
      (nodra-cyan  "#00e5ee")
      (nodra-viola "#120111")
      (nodra-green "#00ff00")
-     (nodra-lsg   "#20b2aa")
+     (nodra-lsg   "#20b2a2") ; not used
      (nodra-pink0 "#ff1493")
      (nodra-pink1 "#f78bc5"))
 
@@ -136,11 +136,14 @@
  `(dired-header    ((t (:foreground ,nodra-cyan :weight bold))))
 
  ;; neotree
- `(neo-root-dir-face   ((t (:foreground ,nodra-pink0))))
+ `(neo-root-dir-face   ((t (:foreground ,nodra-kerr))))
  `(neo-header-face     ((t (:foreground ,nodra-blu2 :weight bold))))
  `(neo-file-link-face  ((t (:foreground ,nodra-cy2))))
- `(neo-expand-btn-face ((t (:foreground ,nodra-blu2))))
+ `(neo-expand-btn-face ((t (:foreground ,nodra-blu2 :weight bold))))
  `(neo-dir-link-face   ((t (:foreground ,nodra-blu2))))
+
+ ;; hl-line
+ `(hl-line ((t (:inverse-video t))))
 
  ;; org
  `(org-level-1 ((t (:foreground ,nodra-gold))))
