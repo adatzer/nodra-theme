@@ -5,7 +5,7 @@
 Nodra is a dark theme for Emacs, with *NO* so much *DRA*-ma.
 It features almost no syntax highlighting.
 So far, mainly addresses the modes:
-ido, which-key, slime, sldb
+ido, which-key, slime(and sldb), sly, neotree.
 
 To install:
 
@@ -18,8 +18,8 @@ To install:
 
 2. Manually:
   - git clone this repository
-  - add the path to the *directory* containing nodra-theme.el to your emacs init    
-    
+  - add the path to the *directory* containing nodra-theme.el to your emacs init
+
     #+BEGIN_SRC emacs-lisp -i
     (add-to-list 'custom-theme-load-path "~/path/to/your/nodra-theme-directory/")
     #+END_SRC
@@ -39,7 +39,7 @@ To load this theme always on startup, add to your init.el file:
 1. Used with Emacs 26, needs > Emacs 24.
 2. Assumes 256-color palette.
 3. If you modify the theme, remember first to
-   
+
    *M-x disable-theme RET nodra RET*
 
    and then load it again, for your changes to take effect.
@@ -53,5 +53,3 @@ To load this theme always on startup, add to your init.el file:
    #+CAPTION: C, Lisp, Slime, Sldb
    #+NAME: lisp-c
    [[./scrshot-c-lisp-slime.png]]
-
-   
