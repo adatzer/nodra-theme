@@ -11,10 +11,11 @@
      (nodra-cy0   "#245361")
      (nodra-cy2   "#99d1ce")
      (nodra-white "#ffffff")
-     (nodra-deff  "#205070")
-     (nodra-comm  "#505050")
+     (nodra-comm  "#ff5555")
      (nodra-inac  "#0f0f0f")
+     (nodra-delim "#ff3030")
      (nodra-paren "#4f94cd") ; SteelBlue3
+     (nodra-deff  "#8be9fd") ; or #205070 or #90b3ff or #4f94cd
 
      (nodra-red   "#aa0000")
      (nodra-kerr  "#b50a5a")
@@ -25,10 +26,11 @@
      (nodra-yell  "#d7d787")
      (nodra-gold  "#ffd700")
      (nodra-blu0  "#5588dd")
-     (nodra-blu2  "#223377")
+     (nodra-blu2  "#222277")
      (nodra-blu4  "#0072ff")
      (nodra-cyan  "#00e5ee")
-     (nodra-viola "#120111")
+     (nodra-viola "#8b008b")
+     (nodra-drac  "#50fa7b")
      (nodra-green "#00ff00"))
 
 (custom-theme-set-faces
@@ -62,17 +64,19 @@
  ;; font-lock
  `(escape-glyph                     ((t (:foreground ,nodra-hu
 						     :weight bold))))
- `(font-lock-comment-face           ((t (:background ,nodra-viola
-						     :foreground ,nodra-comm))))
- `(font-lock-comment-delimiter-face ((t (:background ,nodra-viola
-						     :foreground ,nodra-comm))))
- `(font-lock-builtin-face       ((t (:foreground ,nodra-cy2))))
+ `(font-lock-comment-face           ((t (:background ,nodra-black
+						     :foreground ,nodra-comm
+                                                     :weight normal))))
+ `(font-lock-comment-delimiter-face ((t (:background ,nodra-black
+						     :foreground ,nodra-comm
+                                                     :weight bold))))
+ `(font-lock-builtin-face       ((t (:foreground ,nodra-deff))))
  `(font-lock-keyword-face       ((t (:foreground ,nodra-deff))))
  `(font-lock-constant-face      ((t (:foreground ,nodra-deff))))
  `(font-lock-variable-name-face ((t (:foreground ,nodra-deff))))
  `(font-lock-function-name-face ((t (:foreground ,nodra-deff))))
- `(font-lock-doc-face     ((t (:foreground ,nodra-hu))))
- `(font-lock-string-face  ((t (:foreground ,nodra-hu))))
+ `(font-lock-doc-face     ((t (:foreground ,nodra-viola))))
+ `(font-lock-string-face  ((t (:foreground ,nodra-drac))))
  `(font-lock-type-face    ((t (:foreground ,nodra-deff))))
  `(font-lock-warning-face ((t (:foreground ,nodra-red))))
  `(error   ((t (:foreground ,nodra-red))))
@@ -173,11 +177,11 @@
 
  `(slime-reader-conditional-face ((t (:inherit font-lock-builtin-face))))
 
- `(slime-repl-prompt-face ((t (:foreground ,nodra-grey2))))
+ `(slime-repl-prompt-face ((t (:foreground ,nodra-white))))
 
  `(slime-repl-input-face          ((t (:foreground ,nodra-deff :weight bold))))
  `(slime-repl-output-face         ((t (:foreground ,nodra-hu))))
- `(slime-repl-inputed-output-face ((t (:foreground ,nodra-white))))
+ `(slime-repl-inputed-output-face ((t (:foreground ,nodra-green))))
  `(slime-repl-result-face         ((t (:foreground ,nodra-red))))
 
  `(slime-inspector-action-face  ((t (:foreground ,nodra-choco))))
@@ -191,29 +195,48 @@
  `(sldb-condition-face              ((t (:inherit font-lock-warning-face))))
  `(sldb-section-face                ((t (:inherit header-line))))
  `(sldb-restart-face        ((t (:foreground ,nodra-deff))))
- `(sldb-restart-type-face   ((t (:foreground ,nodra-hu :weight bold))))
- `(sldb-restart-number-face ((t (:foreground ,nodra-hu :weight bold))))
- `(sldb-frame-label-face    ((t (:foreground ,nodra-hu))))
+ `(sldb-restart-type-face   ((t (:foreground ,nodra-cyan :weight bold))))
+ `(sldb-restart-number-face ((t (:foreground ,nodra-cyan :weight bold))))
+ `(sldb-frame-label-face    ((t (:foreground ,nodra-cyan))))
+
+ ;; rainbow-delimiters
+ `(rainbow-delimiters-base-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-1-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-2-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-3-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-4-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-5-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-6-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-7-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-8-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-depth-9-face ((t (:foreground ,nodra-delim :weight bold))))
+ `(rainbow-delimiters-base-error-face ((t (:foreground ,nodra-deff
+                                                       :background ,nodra-pink1))))
+ `(rainbow-delimiters-mismatched-face ((t (:foreground ,nodra-deff
+                                                       :background ,nodra-pink1))))
+ `(rainbow-delimiters-unmatched-face  ((t (:foreground ,nodra-deff
+                                                       :background ,nodra-pink1))))
+
 
  ;; sly
- `(sly-mrepl-prompt-face ((t (:foreground ,nodra-grey2))))
- `(sly-mrepl-output-face ((t (:foreground ,nodra-hu))))
- `(sly-mrepl-note-face   ((t (:foreground ,nodra-cy0))))
- `(sly-part-button-face  ((t (:foreground ,nodra-white))))
+ ;; `(sly-mrepl-prompt-face ((t (:foreground ,nodra-grey2))))
+ ;; `(sly-mrepl-output-face ((t (:foreground ,nodra-hu))))
+ ;; `(sly-mrepl-note-face   ((t (:foreground ,nodra-cy0))))
+ ;; `(sly-part-button-face  ((t (:foreground ,nodra-white))))
 
- `(sly-reader-conditional-face ((t (:inherit font-lock-builtin-face))))
+ ;; `(sly-reader-conditional-face ((t (:inherit font-lock-builtin-face))))
 
- `(sly-error-face         ((t (:underline (:style wave :color ,nodra-red)))))
- `(sly-warning-face       ((t (:underline (:style wave :color ,nodra-pink1)))))
- `(sly-note-face          ((t (:underline (:style wave :color ,nodra-yell)))))
- `(sly-style-warning-face ((t (:underline (:style wave :color ,nodra-green)))))
+ ;; `(sly-error-face         ((t (:underline (:style wave :color ,nodra-red)))))
+ ;; `(sly-warning-face       ((t (:underline (:style wave :color ,nodra-pink1)))))
+ ;; `(sly-note-face          ((t (:underline (:style wave :color ,nodra-yell)))))
+ ;; `(sly-style-warning-face ((t (:underline (:style wave :color ,nodra-green)))))
 
- `(sly-action-face                    ((t (:foreground ,nodra-hu
-						       :weight bold))))
- `(sly-db-restart-number-face         ((t (:inherit sly-action-face))))
- `(sly-db-frame-label-face            ((t (:inherit sly-action-face))))
- `(sly-db-topline-face                ((t (:foreground ,nodra-cyan))))
- `(sly-db-restartable-frame-line-face ((t (:foreground ,nodra-green))))
+ ;; `(sly-action-face                    ((t (:foreground ,nodra-hu
+ ;;        					       :weight bold))))
+ ;; `(sly-db-restart-number-face         ((t (:inherit sly-action-face))))
+ ;; `(sly-db-frame-label-face            ((t (:inherit sly-action-face))))
+ ;; `(sly-db-topline-face                ((t (:foreground ,nodra-cyan))))
+ ;; `(sly-db-restartable-frame-line-face ((t (:foreground ,nodra-green))))
  ))
 
 ;;;###autoload

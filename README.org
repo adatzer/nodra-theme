@@ -3,7 +3,7 @@
 ** Intro
 
 Nodra is a dark theme for Emacs, with *NO* so much *DRA*-ma.
-It features almost no syntax highlighting.
+It features almost no syntax highlighting, and generally king of dark.
 So far, mainly addresses the modes:
 ido, which-key, slime(and sldb), sly, neotree.
 
@@ -46,10 +46,10 @@ To load this theme always on startup, add to your init.el file:
 
 ** Screenshots
 
-   #+CAPTION: Python, Javascript, HTML
+   #+CAPTION: screenshot 1
    #+NAME: py-js-sql
-   [[./scrshot-py-js-html.png]]
+   [[./scrshot1.png]]
 
-   #+CAPTION: C, Lisp, Slime, Sldb
+   #+CAPTION: screenshot 2
    #+NAME: lisp-c
-   [[./scrshot-c-lisp-slime.png]]
+   [[./scrshot2.png]]
