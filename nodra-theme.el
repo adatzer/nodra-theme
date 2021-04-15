@@ -5,7 +5,7 @@
 
 ;; Colors - assume 256-color palette
 (let
-    ((nodra-black "#000000")
+    ((nodra-black "#111117")
      (nodra-grey0 "#000009")
      (nodra-grey2 "#0a3749")
      (nodra-cy0   "#245361")
@@ -15,7 +15,7 @@
      (nodra-inac  "#0f0f0f")
      (nodra-delim "#ff3030")
      (nodra-paren "#4f94cd") ; SteelBlue3
-     (nodra-deff  "#8be9fd") ; or #205070 or #90b3ff or #4f94cd
+     (nodra-deff  "#d2d2d2") ; or #205070 or #90b3ff or #4f94cd or #8be9fd
 
      (nodra-red   "#aa0000")
      (nodra-kerr  "#b50a5a")
@@ -65,10 +65,10 @@
  `(escape-glyph                     ((t (:foreground ,nodra-hu
 						     :weight bold))))
  `(font-lock-comment-face           ((t (:background ,nodra-black
-						     :foreground ,nodra-comm
+						     :foreground ,nodra-viola
                                                      :weight normal))))
  `(font-lock-comment-delimiter-face ((t (:background ,nodra-black
-						     :foreground ,nodra-comm
+						     :foreground ,nodra-viola
                                                      :weight bold))))
  `(font-lock-builtin-face       ((t (:foreground ,nodra-deff))))
  `(font-lock-keyword-face       ((t (:foreground ,nodra-deff))))
@@ -91,14 +91,14 @@
 					:foreground ,nodra-cyan))))
  `(menu                ((t (:background ,nodra-grey2
 					:foreground ,nodra-cy2))))
- `(mode-line           ((t (:background nil
+ `(mode-line           ((t (:background ,nodra-inac
 					:foreground ,nodra-blu4
-					:box (:line-width -1 :color ,nodra-blu4)))))
+					:box (:line-width 1 :color ,nodra-blu4)))))
  `(mode-line-inactive  ((t (:background ,nodra-inac
        					:foreground ,nodra-inac
-					:box nil))))
+					:box (:line-width -1 :color ,nodra-blu2)))))
  `(mode-line-highlight ((t (:foreground ,nodra-green))))
- `(mode-line-buffer-id ((t (:foreground ,nodra-vired :weight normal))))
+ `(mode-line-buffer-id ((t (:foreground ,nodra-kerr :weight normal))))  ;; vired
  `(mode-line-emphasis  ((t (:foreground ,nodra-green))))
 
  ;; parens
@@ -131,10 +131,10 @@
  `(compilation-mode-line-exit ((t (:foreground unspecified :inherit compilation-info))))
 
  ;; ido
- `(ido-first-match ((t (:foreground ,nodra-white :weight bold))))
+ `(ido-first-match ((t (:foreground ,nodra-green :weight bold))))
  `(ido-indicator   ((t (:foreground ,nodra-red))))
  `(ido-only-match  ((t (:foreground ,nodra-green))))
- `(ido-subdir      ((t (:foreground ,nodra-red :weight bold))))
+ `(ido-subdir      ((t (:foreground ,nodra-blu2 :weight bold))))
 
  ;; which-key
  `(which-key-key-face                 ((t (:foreground ,nodra-cyan))))
@@ -150,9 +150,9 @@
  ;; neotree
  `(neo-root-dir-face   ((t (:foreground ,nodra-hu))))
  `(neo-header-face     ((t (:foreground ,nodra-blu2 :weight bold))))
- `(neo-file-link-face  ((t (:foreground ,nodra-cy2))))
- `(neo-expand-btn-face ((t (:foreground ,nodra-blu2 :weight bold))))
- `(neo-dir-link-face   ((t (:foreground ,nodra-blu2))))
+ `(neo-file-link-face  ((t (:foreground ,nodra-deff))))
+ `(neo-expand-btn-face ((t (:foreground ,nodra-blu0 :weight bold))))
+ `(neo-dir-link-face   ((t (:foreground ,nodra-blu0 :weight bold))))
 
  ;; hl-line
  `(hl-line ((t (:inverse-video t))))
