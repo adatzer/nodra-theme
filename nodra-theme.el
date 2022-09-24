@@ -5,8 +5,8 @@
 
 ;; Colors - assume 256-color palette
 (let
-    ((nodra-black "#111117")
-     (nodra-grey0 "#000009")
+    ((nodra-black "#252525") ; #111117
+     (nodra-grey0 "#333333")
      (nodra-grey2 "#0a3749")
      (nodra-cy0   "#245361")
      (nodra-cy2   "#99d1ce")
@@ -14,8 +14,8 @@
      (nodra-comm  "#ff5555")
      (nodra-inac  "#0f0f0f")
      (nodra-delim "#ff3030")
-     (nodra-paren "#4f94cd") ; SteelBlue3
-     (nodra-deff  "#d2d2d2") ; or #205070 or #90b3ff or #4f94cd or #8be9fd
+     (nodra-paren "#2cb5e9") ; #4f94cd SteelBlue3
+     (nodra-deff  "#ffffff") ; or #205070 or #90b3ff or #4f94cd or #8be9fd
 
      (nodra-red   "#aa0000")
      (nodra-kerr  "#b50a5a")
@@ -24,19 +24,20 @@
      (nodra-hu    "#a05050")
      (nodra-choco "#ff7f24")
      (nodra-yell  "#d7d787")
-     (nodra-gold  "#ffd700")
+     (nodra-gold  "#ffc706")
      (nodra-blu0  "#5588dd")
-     (nodra-blu2  "#222277")
+     (nodra-blu2  "#0000ff")
      (nodra-blu4  "#0072ff")
-     (nodra-cyan  "#00e5ee")
+     (nodra-cyan  "#00ffff")
      (nodra-viola "#8b008b")
-     (nodra-drac  "#50fa7b")
-     (nodra-green "#00ff00"))
+     (nodra-drac  "#39b54a") ;#50fa7b #2b3940 #2b7840
+     (nodra-green "#00ff00")
+     (nodra-magen "#762671"))
 
 (custom-theme-set-faces
  'nodra
  `(default      ((t (:background ,nodra-black
-				:foreground ,nodra-deff))))
+				:foreground ,nodra-paren :weight normal))))
  `(button       ((t (:foreground ,nodra-choco
 				:underline (:size -1)))))
  `(widget-field ((t (:background ,nodra-comm
@@ -50,12 +51,12 @@
  `(cursor      ((t (:background ,nodra-red))))
  `(region      ((t (:background ,nodra-yell
 				:foreground unspecified))))
- `(linum       ((t (:background ,nodra-grey0
+ `(linum       ((t (:background ,nodra-black
 				:foreground ,nodra-cy0))))
  `(line-number              ((t (:background ,nodra-grey0
 					     :foreground ,nodra-cy0))))
  `(line-number-current-line ((t (:inherit highlight))))
- `(fringe                   ((t (:background ,nodra-grey0
+ `(fringe                   ((t (:background ,nodra-black
 					     :foreground ,nodra-cy2))))
  `(vertical-border          ((t (:foreground ,nodra-grey0))))
  `(trailing-whitespace      ((t (:background ,nodra-red))))
@@ -65,23 +66,27 @@
  `(escape-glyph                     ((t (:foreground ,nodra-hu
 						     :weight bold))))
  `(font-lock-comment-face           ((t (:background ,nodra-black
-						     :foreground ,nodra-viola
+						     :foreground ,nodra-hu
                                                      :weight normal))))
  `(font-lock-comment-delimiter-face ((t (:background ,nodra-black
-						     :foreground ,nodra-viola
+						     :foreground ,nodra-choco
                                                      :weight bold))))
  `(font-lock-builtin-face       ((t (:foreground ,nodra-deff))))
- `(font-lock-keyword-face       ((t (:foreground ,nodra-deff))))
+ `(font-lock-keyword-face       ((t (:foreground ,nodra-paren))))
  `(font-lock-constant-face      ((t (:foreground ,nodra-deff))))
- `(font-lock-variable-name-face ((t (:foreground ,nodra-deff))))
- `(font-lock-function-name-face ((t (:foreground ,nodra-deff))))
+ `(font-lock-variable-name-face ((t (:foreground ,nodra-paren))))
+ `(font-lock-function-name-face ((t (:foreground ,nodra-paren))))
  `(font-lock-doc-face     ((t (:foreground ,nodra-viola))))
- `(font-lock-string-face  ((t (:foreground ,nodra-drac))))
+ `(font-lock-string-face  ((t (:foreground ,nodra-cyan))))
  `(font-lock-type-face    ((t (:foreground ,nodra-deff))))
  `(font-lock-warning-face ((t (:foreground ,nodra-red))))
  `(error   ((t (:foreground ,nodra-red))))
  `(success ((t (:foreground ,nodra-green))))
  `(warning ((t (:foreground ,nodra-pink1))))
+
+ ;; js2
+ `(js2-function-param ((t (:foreground ,nodra-white))))
+ `(js2-external-variable ((t (:foreground ,nodra-paren))))
 
  ;; mode - header lines
  `(minibuffer-prompt   ((t (:background nil
