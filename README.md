@@ -6,7 +6,7 @@ Nodra is a dark theme for Emacs, with not so much drama: it features almost no s
 
 To install:
 
-1. If you use [[https://github.com/raxod502/straight.el][straight.el]] (as i do), add this to your init.el file:
+1. If you use [straight.el](https://github.com/raxod502/straight.el) (as i do), add this to your init.el file:
 
    ```
    (straight-use-package
